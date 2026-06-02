@@ -1,3 +1,33 @@
+"""
+Hiring Agent - Main Resume Evaluation Pipeline
+
+This is the main entry point for the hiring agent application. It orchestrates
+the complete workflow to evaluate candidate resumes:
+
+**Pipeline Steps**:
+1. **PDF Extraction** - Extract text and structure from resume PDF
+2. **Data Parsing** - Convert extracted text to JSON Resume format
+3. **GitHub Enrichment** - Fetch GitHub profile and repository data
+4. **Evaluation** - Score candidate across multiple categories
+5. **Result Display** - Show formatted evaluation results
+6. **CSV Export** - Export results for batch processing (dev mode)
+
+**Usage**:
+    python score.py <path_to_resume.pdf>
+
+**Features**:
+- Extracts resume data using LLM (Ollama or Google Gemini)
+- Enriches evaluation with GitHub signals and project analysis
+- Generates fair, explainable scores with evidence
+- Displays results with category breakdowns and recommendations
+- Exports to CSV for further analysis (development mode)
+- Local caching for faster re-evaluation
+
+**Output**:
+- Colored console output with evaluation summary
+- CSV file with detailed results (resume_evaluations.csv in dev mode)
+"""
+
 import os
 import sys
 import json
