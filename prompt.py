@@ -1,8 +1,20 @@
 """
-Prompts for Resume Evaluation System
+Prompts and LLM Configuration for Resume Evaluation System
 
-This module contains all the prompts used by the resume evaluation system.
-Centralizing prompts here makes them easier to maintain and update.
+This module manages:
+- LLM provider configuration (Ollama, Google Gemini)
+- Model-specific temperature and top_p parameters
+- Model to provider mappings
+- Environment variable loading and validation
+
+The configuration supports multiple LLM backends with different model options.
+Each model has tuned hyperparameters for consistent, high-quality evaluations.
+
+Attributes:
+    DEFAULT_MODEL (str): The configured LLM model name (from .env or default)
+    PROVIDER (str): The selected LLM provider (ollama or gemini)
+    MODEL_PARAMETERS (dict): Temperature and top_p settings per model
+    MODEL_PROVIDER_MAPPING (dict): Maps model names to their provider type
 """
 
 import os
