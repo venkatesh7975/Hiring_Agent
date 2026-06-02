@@ -1,3 +1,18 @@
+"""
+Resume Evaluation Engine
+
+This module provides the core evaluation logic for scoring and assessing candidate resumes.
+It uses LLMs to perform structured evaluation across multiple categories:
+- Open Source Contributions (0-35 points)
+- Self Projects (0-30 points)
+- Production Experience (0-25 points)
+- Technical Skills (0-10 points)
+- Bonus Points (up to 20 points)
+- Deductions (fairness constraints)
+
+The evaluator generates fair, explainable scores with evidence and recommendations.
+"""
+
 from typing import Dict, List, Optional, Tuple, Any
 from pydantic import BaseModel, Field, field_validator
 from models import JSONResume, EvaluationData
