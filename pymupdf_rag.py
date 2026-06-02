@@ -1,38 +1,35 @@
 """
-This script accepts a PDF document filename and converts it to a text file
-in Markdown format, compatible with the GitHub standard.
+PDF to Markdown Conversion Module (PyMuPDF-Based RAG Preprocessing)
 
-It must be invoked with the filename like this:
+This module converts PDF documents to well-structured Markdown format,
+optimized for LLM ingestion and text processing.
 
-python pymupdf_rag.py input.pdf [-pages PAGES]
+**Purpose in Hiring Agent**:
+- Converts resume PDFs to markdown-formatted text
+- Preserves document structure and formatting
+- Enables section-based extraction for LLM processing
+- Handles tables, images, and complex layouts
 
-The "PAGES" parameter is a string (containing no spaces) of comma-separated
-page numbers to consider. Each item is either a single page number or a
-number range "m-n". Use "N" to address the document's last page number.
-Example: "-pages 2-15,40,43-N"
+**Features**:
+- Maintains Western reading order
+- Extracts text with proper hierarchical structure
+- Converts tables to markdown format
+- Handles multi-column layouts
+- Preserves formatting cues (bold, italics, lists)
+- Base64 encodes embedded images for LLM compatibility
 
-It will produce a markdown text file called "input.md".
+**Usage**:
+    python pymupdf_rag.py input.pdf [-pages PAGES]
+    
+Example: python pymupdf_rag.py resume.pdf -pages 1-3
 
-Text will be sorted in Western reading order. Any table will be included in
-the text in markdwn format as well.
-
-Dependencies
--------------
-PyMuPDF v1.25.5 or later
+This script is adapted from PyMuPDF4LLM for resume-specific preprocessing.
 
 Copyright and License
-----------------------
+---------------------
 Copyright (C) 2024-2025 Artifex Software, Inc.
-
-PyMuPDF4LLM is free software: you can redistribute it and/or modify it under the
-terms of the GNU Affero General Public License as published by the Free
-Software Foundation, either version 3 of the License, or (at your option)
-any later version.
-
-Alternative licensing terms are available from the licensor.
-For commercial licensing, see <https://www.artifex.com/> or contact
-Artifex Software, Inc., 39 Mesa Street, Suite 108A, San Francisco,
-CA 94129, USA, for further information.
+PyMuPDF4LLM is free software under GNU AGPL v3 or later.
+See https://www.artifex.com/ for commercial licensing.
 """
 
 import os
