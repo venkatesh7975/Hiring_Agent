@@ -8,6 +8,11 @@ cache/
 resume_evaluations.csv
 greenhouse_resumes/*
 
+# Environment variables (contains sensitive API keys)
+.env
+.env.local
+.env*.local
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
