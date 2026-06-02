@@ -1,3 +1,35 @@
+"""
+Data Models and Type Definitions Module
+
+This module defines all Pydantic models and protocols used throughout the application:
+
+**JSON Resume Standard Models** (https://jsonresume.org/):
+- Basics: Name, contact, profiles, location
+- Work: Employment history and roles
+- Education: Academic credentials
+- Skills: Technical and professional abilities
+- Projects: Portfolio projects and contributions
+- Awards: Recognitions and achievements
+- Volunteer: Volunteer experience
+
+**Provider Models**:
+- LLMProvider: Protocol for language model backends
+- OllamaProvider: Local LLM execution
+- GeminiProvider: Google Gemini API integration
+
+**Evaluation Models**:
+- EvaluationData: Structured evaluation results
+- CategoryScore: Individual category scores with evidence
+- BonusPoints: Bonus points with breakdown
+- Deductions: Deductions with reasons
+
+**GitHub Models**:
+- GitHubProfile: GitHub user profile data
+- GitHubRepository: Repository metadata
+
+All models use Pydantic for validation, serialization, and type safety.
+"""
+
 from typing import List, Optional, Dict, Tuple, Any, Protocol, runtime_checkable
 from pydantic import BaseModel, Field, field_validator
 from enum import Enum
