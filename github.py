@@ -1,3 +1,23 @@
+"""
+GitHub Integration and Repository Analysis Module
+
+This module provides functionality to:
+- Fetch GitHub user profiles and repository data
+- Cache GitHub API responses to respect rate limits
+- Analyze repository metadata and contributor information
+- Classify and rank projects for evaluation
+- Select top 7 projects using AI for deeper assessment
+
+Features:
+- Implements intelligent rate limiting with adaptive sleeping
+- Local caching to minimize API calls
+- Support for authenticated requests (higher rate limits)
+- Project classification (educational, production, prototype, etc.)
+
+The module integrates with GitHub's REST API and uses LLMs to intelligently
+select the most impressive projects for inclusion in resume evaluations.
+"""
+
 import os
 import re
 import json
