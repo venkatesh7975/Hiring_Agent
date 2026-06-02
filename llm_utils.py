@@ -1,5 +1,12 @@
 """
-Utility functions for LLM providers.
+Utility functions for LLM provider initialization and response processing.
+
+This module provides helper functions for:
+- Initializing LLM providers (Ollama, Google Gemini)
+- Extracting and cleaning JSON from LLM responses
+- Removing markdown formatting and thinking blocks
+
+The functions handle cross-provider compatibility and response normalization.
 """
 
 import logging
