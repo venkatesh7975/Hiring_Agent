@@ -2,7 +2,7 @@
 Template Manager for Section Extraction
 
 This module provides functionality to load and render Jinja templates for
-section-specific resume extraction prompts.
+section-specific resume extraction prompts. 
 """
 
 import os
