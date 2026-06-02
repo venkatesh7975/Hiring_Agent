@@ -1,3 +1,29 @@
+"""
+PDF Resume Extraction and Parsing Module
+
+This module handles the complete resume extraction pipeline:
+1. **PDF Text Extraction** - Converts PDF pages to markdown-formatted text using PyMuPDF
+2. **Section-by-Section Extraction** - Parses resume into structured sections:
+   - Basics (name, contact, profile links)
+   - Work Experience
+   - Education
+   - Skills
+   - Projects
+   - Awards
+3. **LLM-Powered Parsing** - Uses language models to extract structured JSON from text
+4. **Data Validation** - Converts and validates data using Pydantic models
+5. **GitHub Integration** - Fetches and integrates GitHub profile and repository data
+
+Key Features:
+- Supports both Ollama (local) and Google Gemini (cloud) LLM backends
+- Intelligent section-by-section extraction for better accuracy
+- Jinja2 templated prompts for consistent extraction patterns
+- Local caching of extracted data for development and testing
+- Error handling and graceful fallbacks for malformed sections
+
+The module orchestrates the entire PDF-to-JSON-Resume transformation.
+"""
+
 import os
 import sys
 import json
