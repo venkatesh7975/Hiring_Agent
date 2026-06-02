@@ -94,7 +94,7 @@ Hiring Agent parses a resume PDF to Markdown, extracts sectioned JSON using a lo
 ### Quick setup with pip
 
 ```bash
-$ git clone https://github.com/interviewstreet/hiring-agent
+$ git clone https://github.com/venkatesh7975/hiring-agent
 $ cd hiring-agent
 
 $ python -m venv .venv
@@ -268,17 +268,6 @@ What happens:
 
 ---
 
-## Contributing
-
-Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines on filing issues, proposing changes, and submitting pull requests. Key principles include:
-
-- Keep prompts declarative and provider-agnostic.
-- Validate changes with a couple of real resumes under different providers.
-- Add or adjust unit-free smoke tests that call each stage with minimal inputs.
-
----
 
 
-## License
 
-[MIT](https://github.com/interviewstreet/hiring-agent/blob/master/LICENSE) © HackerRank
