@@ -1,3 +1,28 @@
+"""
+Data Transformation and Normalization Module
+
+This module provides functions to transform and normalize resume data into
+the JSON Resume standard format (https://jsonresume.org/):
+
+Key Transformations:
+- Normalize LLM-extracted data to consistent schema
+- Convert various section names to standard format
+- Transform work experience, education, and skills
+- Normalize dates and formatting
+- Create human-readable text representations
+- Export evaluation data to CSV
+
+Functions:
+- transform_parsed_data(): Normalize raw parsed resume data
+- convert_json_resume_to_text(): Generate text representation for evaluation
+- convert_github_data_to_text(): Format GitHub data for inclusion
+- transform_evaluation_response(): Prepare evaluation results for CSV export
+- Various section-specific transformers (basics, work, education, skills, etc.)
+
+This module ensures data consistency across the pipeline and enables
+proper evaluation of candidate information.
+"""
+
 from typing import Dict, List, Optional
 import pdb
 from models import JSONResume
